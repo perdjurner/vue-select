@@ -129,7 +129,7 @@
       }
     ]
   },
-  "pre-commit": [
+  "precommit": [
     "build"
   ]
 }
