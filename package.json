@@ -20,7 +20,8 @@
     "build:preview": "cd docs && yarn build",
     "test": "jest",
     "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "precommit": "build"
   },
   "repository": {
     "type": "git",
@@ -128,8 +129,5 @@
         "maxSize": "6 KB"
       }
     ]
-  },
-  "precommit": [
-    "build"
-  ]
+  }
 }
