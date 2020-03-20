@@ -20,8 +20,12 @@
     "build:preview": "cd docs && yarn build",
     "test": "jest",
     "semantic-release": "semantic-release",
-    "commit": "git-cz",
-    "precommit": "npsm run build"
+    "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
   },
   "repository": {
     "type": "git",
