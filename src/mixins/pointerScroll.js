@@ -33,8 +33,7 @@ export default {
       if (this.$refs.dropdownMenu && this.dropdownOpen) {
         for (let i = 0; i < this.typeAheadPointer; i++) {
           if (this.$refs.dropdownMenu.children[i]) {
-            pixelsToPointerTop += this.$refs.dropdownMenu.children[i]
-            .offsetHeight;
+            pixelsToPointerTop += this.$refs.dropdownMenu.children[i].offsetHeight;
           }
         }
       }
