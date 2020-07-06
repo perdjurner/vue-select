@@ -26,9 +26,6 @@ export default {
       for (let i = this.typeAheadPointer - 1; i >= 0; i--) {
         if (this.selectable(this.filteredOptions[i])) {
           this.typeAheadPointer = i;
-          if( this.maybeAdjustScroll ) {
-            this.maybeAdjustScroll()
-          }
           break;
         }
       }
@@ -43,9 +40,6 @@ export default {
       for (let i = this.typeAheadPointer + 1; i < this.filteredOptions.length; i++) {
         if (this.selectable(this.filteredOptions[i])) {
           this.typeAheadPointer = i;
-          if( this.maybeAdjustScroll ) {
-            this.maybeAdjustScroll()
-          }
           break;
         }
       }
@@ -56,16 +50,12 @@ export default {
      * Optionally clear the search input on selection.
      * @return {void}
      */
-    typeAheadSelect () {
-      if (!this.taggable && this.filteredOptions[this.typeAheadPointer]) {
-        this.select(this.filteredOptions[this.typeAheadPointer]);
-      } else if (this.taggable && this.search.length) {
-        this.select(this.createOption(this.search));
-      }
+    typeAheadSelect() {
+      const typeAheadOption = this.filteredOptions[this.typeAheadPointer];
 
-      if (this.clearSearchOnSelect) {
-        this.search = '';
+      if (typeAheadOption) {
+        this.select(typeAheadOption);
       }
-    },
+    }
   }
 }

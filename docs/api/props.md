@@ -1,3 +1,29 @@
+## autoscroll <Badge text="v3.10.0+" />
+
+When true, the dropdown will automatically scroll to ensure
+that the option highlighted is fully within the dropdown viewport
+when navigating with keyboard arrows.
+
+```js
+autoscroll: {
+  type: Boolean,
+  default: true
+}
+```
+
+## autocomplete
+
+The value provided here will be bound to the [autocomplete
+HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+on the search input. Defaults to `off`.
+
+```js
+autocomplete: {
+    type: String,
+    default: 'off'
+},
+```
+
 ## appendToBody <Badge text="v3.7.0+" />
 
 Append the dropdown element to the end of the body
